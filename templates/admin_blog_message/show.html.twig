@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BlogMessage{% endblock %}
+
+{% block body %}
+    <h1>BlogMessage</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ blog_message.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ blog_message.title }}</td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td>{{ blog_message.message }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_blog_message_index') }}">back to list</a>
+
+    <a href="{{ path('admin_blog_message_edit', {'id': blog_message.id}) }}">edit</a>
+
+    {{ include('admin_blog_message/_delete_form.html.twig') }}
+{% endblock %}
