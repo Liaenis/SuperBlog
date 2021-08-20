@@ -5,15 +5,30 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
-
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
+{% block stylesheets %}
+{#{{ encore_entry_link_tags('app') }}#}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/
+css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
+KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigi
+n="anonymous">
+{% endblock %}
+{% block javascripts %}
+{#{{ encore_entry_script_tags('app') }}#}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/
+js/bootstrap.bundle.min.js" integrity="sha384-
+U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigi
+n="anonymous"></script>
         {% endblock %}
     </head>
     <body>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Homepage</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/admin/blog/message/">Administration</a>
+        </li>
+    </ul>
         {% block body %}{% endblock %}
     </body>
 </html>
