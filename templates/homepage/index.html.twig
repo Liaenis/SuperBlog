@@ -18,11 +18,11 @@
     </ul>
 </div>
 <div>
-    {% for blog_message in blog_messages %}
+    {% for message in blog_message %}
         <div class="row">
-            <div class="col">{{ blog_message.title }}</div>
+            <div class="col">{{ message.title }}</div>
         </div>
-        <div class="row">{{ blog_message.message }}</div>
+        <div class="row">{{ message.message }}</div>
     {% else %}
         <div class="row">
             <td colspan="4">no records found</td>
